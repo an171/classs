@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Классы</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        figure {
+            /* width: 30%; */
+            height: 30vh;
+            flex-basis: 20%;
+            text-align: center;
+            border: 1px solid black
+        }
+
+        img {
+            width: 50%;
+            margin: 0 auto;
+
+        }
+
+        figcaption {
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+        class Card {
+            constructor(img, txt) {
+                this.img = img;
+                this.txt = txt;
+            }
+            cardMaker() {
+                let raz = `<img src="${this.img}"> <figcaption>${this.txt}</figcaption>`;
+                // document.querySelector(`#${id}`).innerHTML = raz;
+                let div_node = document.createElement("figure")
+                let ap_div = document.body.appendChild(div_node)
+                ap_div.innerHTML = raz
+            }
+        }
+        let card = [];
+        let imgs = [
+            "animal-2029774_640.png", "animal-3745613_640.png", "camel-48445_640.png", "cat-46676_640.png",
+            "dog-48490_640.png",
+            "fox-807315_640.png"
+        ]
+        let texts = ["Петух", "Лошадь", "Верблюд", "Кошка", "Собака", "Лиса",
+            "Покупатель всегда на связи", "Комфортный выбор", "Удобство оплаты"
+        ];
+        // let cards = ["card0", "card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", ];
+        for (let i = 0; i < texts.length; i++) {
+            card[i] = new Card(imgs[i], texts[i])
+            card[i].cardMaker()
+
+
+        }
+    </script>
+</body>
+
+</html>
