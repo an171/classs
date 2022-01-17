@@ -19,7 +19,12 @@
 
         figure {
             /* width: 30%; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             height: 30vh;
+            padding: 50px;
+            box-sizing: border-box;
             flex-basis: 20%;
             text-align: center;
             border: 1px solid black
@@ -32,6 +37,7 @@
         }
 
         figcaption {
+            /* display: inline; */
             vertical-align: bottom;
         }
     </style>
@@ -58,11 +64,11 @@
         let card = [];
         let imgs = [
             "animal-2029774_640.png", "animal-3745613_640.png", "camel-48445_640.png", "cat-46676_640.png",
-            "dog-48490_640.png",
-            "fox-807315_640.png"
+            "dog-48490_640.png", "fox-807315_640.png", "parrot-1417286_640.png",
+            "rabbit-5661931_640.jpg", "sheep-35599_640.png", "sloth-5043324_640.png", "squirrel-1456764_640.png"
         ]
         let texts = ["Петух", "Лошадь", "Верблюд", "Кошка", "Собака", "Лиса",
-            "Покупатель всегда на связи", "Комфортный выбор", "Удобство оплаты"
+            "Попугай", "Заяц", "Овца", "Слон", "Белка"
         ];
         // let cards = ["card0", "card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", ];
         for (let i = 0; i < texts.length; i++) {
